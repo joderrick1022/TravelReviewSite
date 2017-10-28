@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: cornflowerblue;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,29 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.thumbnail .caption {
+    text-align:center;
+    background-color: grey;
+    padding: 9px;
+    color: #a94442;
+}
+
+#jumbotron{
+
+    background-color:chartreuse;
+    
+
+
+}
+
+#myCarousel{
+
+    text-align:center;
+
+    height:300px;
+    width:100%;
+
+    background-color:darkgrey;
 }

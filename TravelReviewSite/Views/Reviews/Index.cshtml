@@ -1,0 +1,90 @@
+﻿@model IEnumerable<TravelReviewSite.Models.Review>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Travel Review</h2>
+
+<p>
+    @Html.ActionLink("Give Your review", "Create")
+</p>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv9_sMwAZWQV7Tuza0JTzFT-ztKhz00i_ZB9RfW7Gqv35KOfax" alt="">
+                <div class="caption">
+                    
+                    <h3>@Html.DisplayNameFor(model => model.Location):@Html.DisplayFor(modelItem => item.Location)</h3>
+                    <h3>@Html.DisplayNameFor(model => model.Name):@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h4>@Html.DisplayNameFor(model => model.Pros):@Html.DisplayFor(modelItem => item.Pros)</h4>
+                    <h4>@Html.DisplayNameFor(model => model.Cons):@Html.DisplayFor(modelItem => item.Cons)</h4>
+                    <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary", role = "button" })</p>
+
+
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th><th>
+            @Html.DisplayNameFor(model => model.Pros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRecommended)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Pros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRecommended)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>*@

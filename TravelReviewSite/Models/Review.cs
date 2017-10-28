@@ -13,6 +13,7 @@ namespace TravelReviewSite.Models
         [Key]
         public  int ID { get; set; }
         public string Name { get; set; }
+        public string Location { get; set; }
         public string Pros { get; set; }
         public string Cons { get; set; }
         public double Cost { get; set; }

@@ -15,7 +15,7 @@ namespace TravelReviewSite.Controllers
         private TravelReviewSiteContext db = new TravelReviewSiteContext();
 
         // GET: Reviews
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             var reviews = db.Reviews.Include(r => r.Category);
             return View(reviews.ToList());
